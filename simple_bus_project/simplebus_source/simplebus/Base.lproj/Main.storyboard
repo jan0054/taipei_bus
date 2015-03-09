@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="V1m-Tf-Zd7">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--Init Update View Controller-->
+        <scene sceneID="PhI-yT-NnA">
+            <objects>
+                <viewController id="V1m-Tf-Zd7" customClass="InitUpdateViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5qL-bU-cpO"/>
+                        <viewControllerLayoutGuide type="bottom" id="CIg-M8-HS7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a9z-8U-0D5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="路線資訊更新中請稍等" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iVZ-OJ-QZJ">
+                                <rect key="frame" x="20" y="229" width="280" height="27"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Me-Ry-6xM">
+                                <rect key="frame" x="33" y="286" width="254" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="infolabel" destination="iVZ-OJ-QZJ" id="PYf-wq-whg"/>
+                        <outlet property="progresslabel" destination="3Me-Ry-6xM" id="twV-Jb-jjn"/>
+                        <segue destination="8YX-ce-x5E" kind="modal" identifier="initdonesegue" id="ajM-A1-yXl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6HO-4Y-Spx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-317" y="180"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Vex-rW-GRa">
+            <objects>
+                <tabBarController id="8YX-ce-x5E" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="JQR-rB-NYL">
+                        <rect key="frame" x="0.0" y="431" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="leM-YP-Wel" kind="relationship" relationship="viewControllers" id="eDO-ev-oZ4"/>
+                        <segue destination="pdf-Ad-kR2" kind="relationship" relationship="viewControllers" id="27S-q9-R2K"/>
+                        <segue destination="79g-9G-cEs" kind="relationship" relationship="viewControllers" id="Vgy-58-j4i"/>
+                        <segue destination="ahc-sO-iOK" kind="relationship" relationship="viewControllers" id="3We-uh-DME"/>
+                        <segue destination="afn-UB-63s" kind="relationship" relationship="viewControllers" id="8MA-8w-ao6"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="180"/>
+        </scene>
+        <!--我的路線-->
+        <scene sceneID="3MX-4H-GlN">
+            <objects>
+                <viewController id="25D-zj-Vyi" customClass="MyRoutesViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4gw-DF-Qt5"/>
+                        <viewControllerLayoutGuide type="bottom" id="msn-dp-U9n"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EG0-6i-Kjy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mKf-rt-goh">
+                                <rect key="frame" x="20" y="74" width="280" height="29"/>
+                                <segments>
+                                    <segment title="上班"/>
+                                    <segment title="下班"/>
+                                    <segment title="其它"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segCtrl_action:" destination="25D-zj-Vyi" eventType="valueChanged" id="S16-UM-JF1"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="最後更新:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FLx-85-CoH">
+                                <rect key="frame" x="179" y="106" width="120" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="11"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="I6N-JW-RDH">
+                                <rect key="frame" x="0.0" y="132" width="320" height="386"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myfavcell" id="YaI-We-DOy" customClass="FavBusTableViewCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YaI-We-DOy" id="BFq-zK-elM">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5Y-j9-TL7">
+                                                    <rect key="frame" x="20" y="13" width="190" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=":55" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1F-Pb-3LK">
+                                                    <rect key="frame" x="271" y="13" width="44" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="21" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SV4-8c-ElD">
+                                                    <rect key="frame" x="241" y="13" width="30" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6l-c5-oJ8">
+                                                    <rect key="frame" x="248" y="13" width="51" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="busname_label" destination="w5Y-j9-TL7" id="3ri-0R-Vti"/>
+                                            <outlet property="bustime_alt_label" destination="v6l-c5-oJ8" id="J8t-hx-vEc"/>
+                                            <outlet property="bustime_label" destination="U1F-Pb-3LK" id="Fia-yI-G7I"/>
+                                            <outlet property="bustime_min_label" destination="SV4-8c-ElD" id="2Rn-nW-pxg"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="25D-zj-Vyi" id="ahr-BO-c3C"/>
+                                    <outlet property="delegate" destination="25D-zj-Vyi" id="gO8-Aa-9di"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="我的路線" id="959-pI-I0G">
+                        <barButtonItem key="leftBarButtonItem" id="pUm-4P-uBc">
+                            <connections>
+                                <action selector="update_time_tap:" destination="25D-zj-Vyi" id="Wpv-Pr-SMn"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="新增" id="xyv-hJ-ouz">
+                            <connections>
+                                <action selector="addfav_action:" destination="25D-zj-Vyi" id="kM9-RZ-7IB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="last_update_label" destination="FLx-85-CoH" id="boa-h0-nc7"/>
+                        <outlet property="myfavtable" destination="I6N-JW-RDH" id="6MP-Oe-7Bt"/>
+                        <outlet property="segCtrl" destination="mKf-rt-goh" id="C4v-Pd-BJu"/>
+                        <outlet property="update_timer" destination="pUm-4P-uBc" id="MlO-FN-eFq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nbK-aS-qib" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="915" y="-139"/>
+        </scene>
+        <!--要遲到了-->
+        <scene sceneID="tSF-e7-E6s">
+            <objects>
+                <viewController id="ahc-sO-iOK" customClass="CallTaxiViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ay1-e2-67k"/>
+                        <viewControllerLayoutGuide type="bottom" id="qAf-nO-aZa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JXw-mP-yAe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ejb-dY-U2z">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="電話叫車" id="6Vc-21-Oyn"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8CG-Im-Py2">
+                                <rect key="frame" x="184" y="79" width="82" height="30"/>
+                                <state key="normal" title="台灣大車隊">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="calltaxi2:" destination="ahc-sO-iOK" eventType="touchUpInside" id="clh-Yf-YUd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egR-A4-6Pj">
+                                <rect key="frame" x="62" y="79" width="46" height="30"/>
+                                <state key="normal" title="大都會">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="calltaxi1:" destination="ahc-sO-iOK" eventType="touchUpInside" id="njg-Qa-U8e"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="要遲到了" image="sleepalarm.png" id="wyo-wu-0MO"/>
+                    <connections>
+                        <outlet property="calltaxi1_button" destination="egR-A4-6Pj" id="74Q-j4-vC1"/>
+                        <outlet property="calltaxi2_button" destination="8CG-Im-Py2" id="YU4-Jy-gtR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rG0-NZ-sOQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1430" y="107"/>
+        </scene>
+        <!--路線查詢-->
+        <scene sceneID="2Vu-k6-gKN">
+            <objects>
+                <viewController id="sMJ-Uc-yzN" customClass="SearchRoutesViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aEf-YV-hiN"/>
+                        <viewControllerLayoutGuide type="bottom" id="lFy-aa-hlF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ShX-xQ-Ehh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vjw-4J-YJC">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="路線查詢" id="fWX-hj-Zi0"/>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="x4e-h3-LcM">
+                                <rect key="frame" x="0.0" y="120" width="320" height="399"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchresultcell" id="kpI-3p-fGB" customClass="SearchCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kpI-3p-fGB" id="HfS-iQ-RDC">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4A7-Ve-S2I">
+                                                    <rect key="frame" x="13" y="11" width="183" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="busname_label" destination="4A7-Ve-S2I" id="U00-pc-Jdd"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="sMJ-Uc-yzN" id="Of0-qz-vBP"/>
+                                    <outlet property="delegate" destination="sMJ-Uc-yzN" id="jwb-tu-snA"/>
+                                </connections>
+                            </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aAr-Fm-zTE">
+                                <rect key="frame" x="10" y="82" width="300" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="路線查詢" id="cQY-Qi-AML">
+                        <barButtonItem key="leftBarButtonItem" title="鍵盤" id="D9J-2R-oKB">
+                            <connections>
+                                <action selector="kyeboard_switch_tap:" destination="sMJ-Uc-yzN" id="3Nc-CG-7nr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="SearchResultTable" destination="x4e-h3-LcM" id="wZI-C4-1YG"/>
+                        <outlet property="keyboard_switch" destination="D9J-2R-oKB" id="rLb-MN-kNc"/>
+                        <outlet property="search_field" destination="aAr-Fm-zTE" id="x0p-PF-wCx"/>
+                        <segue destination="1Va-xV-29e" kind="push" identifier="routeinfosegue" id="W4m-kP-Dmg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bLk-F8-hfQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="159" y="886"/>
+        </scene>
+        <!--Route Info View Controller-->
+        <scene sceneID="Jdw-LM-mMj">
+            <objects>
+                <viewController id="1Va-xV-29e" customClass="RouteInfoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Sf-St-odX"/>
+                        <viewControllerLayoutGuide type="bottom" id="rzc-nM-DY5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sbX-v9-qg8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eaJ-XI-UN0">
+                                <rect key="frame" x="20" y="74" width="280" height="29"/>
+                                <segments>
+                                    <segment title="去程"/>
+                                    <segment title="返程"/>
+                                </segments>
+                                <connections>
+                                    <action selector="gobackseg_action:" destination="1Va-xV-29e" eventType="valueChanged" id="5ti-FJ-q5h"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Jdz-vW-Sm4">
+                                <rect key="frame" x="0.0" y="110" width="320" height="407"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="businfocell" id="AuY-WK-Uyv" customClass="FavBusTableViewCell">
+                                        <rect key="frame" x="10" y="120" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AuY-WK-Uyv" id="4sP-dj-0kO">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oz9-EA-GKd">
+                                                    <rect key="frame" x="20" y="14" width="220" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=":55" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQZ-Dn-aEe">
+                                                    <rect key="frame" x="271" y="13" width="44" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="21" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="id4-2c-uTY">
+                                                    <rect key="frame" x="241" y="13" width="30" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDK-Ph-852">
+                                                    <rect key="frame" x="248" y="13" width="51" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="busname_label" destination="Oz9-EA-GKd" id="UEq-ig-AKV"/>
+                                            <outlet property="bustime_alt_label" destination="sDK-Ph-852" id="fse-La-Kee"/>
+                                            <outlet property="bustime_label" destination="XQZ-Dn-aEe" id="VCh-aD-2Jt"/>
+                                            <outlet property="bustime_min_label" destination="id4-2c-uTY" id="YD1-KV-xuO"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="1Va-xV-29e" id="aqy-bH-mHK"/>
+                                    <outlet property="delegate" destination="1Va-xV-29e" id="0HE-kQ-0TL"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Fc9-63-rfv">
+                        <barButtonItem key="rightBarButtonItem" image="addbookmark.png" id="3jf-Kk-900">
+                            <connections>
+                                <action selector="addroutetofav_action:" destination="1Va-xV-29e" id="g7L-Xv-dyu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addroutetofave_outlet" destination="3jf-Kk-900" id="9nT-bF-Crg"/>
+                        <outlet property="gobackseg" destination="eaJ-XI-UN0" id="YpA-bo-RGf"/>
+                        <outlet property="stopinfotable" destination="Jdz-vW-Sm4" id="ga9-u7-mS6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mtw-X7-Jd5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="631" y="885"/>
+        </scene>
+        <!--等車無聊-->
+        <scene sceneID="8ge-95-QPz">
+            <objects>
+                <viewController id="79g-9G-cEs" customClass="WhileWaitingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZCZ-yT-5uk"/>
+                        <viewControllerLayoutGuide type="bottom" id="jTq-ZT-y59"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rmg-EH-ejA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q7A-ud-VHm">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="等車好無聊!" id="Pe7-MT-ySp"/>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U71-jL-M8z">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="等車無聊" image="infopage.png" id="138-oj-Kjx"/>
+                    <connections>
+                        <outlet property="BoringWebView" destination="U71-jL-M8z" id="l19-0V-JOB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oH1-bH-oni" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="978" y="837"/>
+        </scene>
+        <!--設定-->
+        <scene sceneID="CbL-uz-zQq">
+            <objects>
+                <viewController id="afn-UB-63s" customClass="SettingsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8a9-NO-8fu"/>
+                        <viewControllerLayoutGuide type="bottom" id="vWo-M9-ekK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GHX-dq-LBF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="upq-iH-64M">
+                                <rect key="frame" x="16" y="25" width="288" height="29"/>
+                                <segments>
+                                    <segment title="地區設定"/>
+                                    <segment title="時間設定"/>
+                                </segments>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vwY-zP-oNP">
+                                <rect key="frame" x="0.0" y="61" width="320" height="458"/>
+                                <subviews>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="DnN-Qg-9p0">
+                                        <rect key="frame" x="0.0" y="198" width="320" height="260"/>
+                                    </mapView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="設定" id="16V-Be-HXD"/>
+                    <connections>
+                        <outlet property="fence_mapview" destination="DnN-Qg-9p0" id="pZd-yn-5jK"/>
+                        <outlet property="geo_background_view" destination="vwY-zP-oNP" id="8fH-io-Ae1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hGU-it-cLt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1348" y="786"/>
+        </scene>
+        <!--路線查詢-->
+        <scene sceneID="lmI-id-mXq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pdf-Ad-kR2" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="路線查詢" image="searchglass.png" id="fUZ-uG-AyD"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0JL-gm-di6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sMJ-Uc-yzN" kind="relationship" relationship="rootViewController" id="t0l-nB-xgT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7aS-dE-LFx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-198" y="886"/>
+        </scene>
+        <!--我的路線-->
+        <scene sceneID="6ff-Er-GoG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="leM-YP-Wel" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="我的路線" image="bookmark.png" id="aHo-5z-whQ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hLc-Qv-W29">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="25D-zj-Vyi" kind="relationship" relationship="rootViewController" id="ayz-pF-nJV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0A4-lB-xh9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="524" y="-135"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="addbookmark.png" width="24" height="24"/>
+        <image name="bookmark.png" width="24" height="24"/>
+        <image name="infopage.png" width="24" height="24"/>
+        <image name="searchglass.png" width="24" height="24"/>
+        <image name="sleepalarm.png" width="24" height="24"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

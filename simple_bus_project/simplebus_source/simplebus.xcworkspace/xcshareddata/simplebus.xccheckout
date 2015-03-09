@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>21EE2966-EA80-4E41-91FC-463C9982B407</string>
+	<key>IDESourceControlProjectName</key>
+	<string>simplebus</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C5E7C8038FBF1BDF9508CA0F9BA9E7F81FCC2E85</key>
+		<string>https://github.com/jan0054/simplebus.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>simplebus.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C5E7C8038FBF1BDF9508CA0F9BA9E7F81FCC2E85</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jan0054/simplebus.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C5E7C8038FBF1BDF9508CA0F9BA9E7F81FCC2E85</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C5E7C8038FBF1BDF9508CA0F9BA9E7F81FCC2E85</string>
+			<key>IDESourceControlWCCName</key>
+			<string>simplebus</string>
+		</dict>
+	</array>
+</dict>
+</plist>

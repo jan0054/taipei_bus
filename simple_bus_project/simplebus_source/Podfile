@@ -1,0 +1,6 @@
+source 'https://github.com/CocoaPods/Specs.git'
+pod 'MagicalRecord'
+pod 'HTAutocompleteTextField'
+pod 'MBProgressHUD'
+pod 'SVProgressHUD'
+pod 'AFNetworking'
